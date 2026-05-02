@@ -70,7 +70,7 @@
 
 @layer base {
   body {
-    @apply bg-surface text-on-surface font-inter antialiased;
+    @apply bg-surface text-on-surface font-inter antialiased overflow-x-hidden;
   }
 }
 

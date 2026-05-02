@@ -26,7 +26,7 @@ const Home = () => {
               delay={150}
               animateBy="words"
               direction="top"
-              className="font-manrope text-[48px] md:text-[64px] lg:text-[80px] font-semibold text-primary leading-[1.1] tracking-[-0.04em] mb-8"
+              className="font-manrope text-[40px] md:text-[64px] lg:text-[80px] font-semibold text-primary leading-[1.1] tracking-[-0.04em] mb-8 justify-center lg:justify-start"
             />
 
             <p className="font-inter text-base md:text-lg text-on-surface-variant mb-12 max-w-xl mx-auto lg:mx-0 leading-relaxed animate-fade-in-up opacity-0 [animation-delay:600ms]">
