@@ -69,8 +69,18 @@
 }
 
 @layer base {
-  body {
+  html, body {
     @apply bg-surface text-on-surface font-inter antialiased overflow-x-hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+  }
+
+  #root {
+    @apply w-full overflow-x-hidden;
   }
 }
 
