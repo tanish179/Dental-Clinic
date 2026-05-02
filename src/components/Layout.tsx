@@ -1,9 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Heart } from 'lucide-react';
+import { Heart, Menu, X } from 'lucide-react';
+import { useState, useEffect } from 'react';
 import ShinyText from './animations/ShinyText';
 
 const Navbar = () => {
   const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const navLinks = [
     { name: 'Services', path: '/services' },
@@ -11,16 +13,22 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location]);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-200 h-20">
-      <div className="flex justify-between items-center h-full px-16 max-w-[1440px] mx-auto">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 h-20">
+      <div className="flex justify-between items-center h-full px-6 md:px-16 max-w-[1440px] mx-auto">
         <Link to="/" className="flex items-center gap-2 text-xl font-bold tracking-tighter text-slate-900 uppercase">
-          <div className="w-8 h-8 bg-navy-slate rounded-lg flex items-center justify-center text-white">
+          <div className="w-8 h-8 bg-navy-slate rounded-lg flex items-center justify-center text-white shrink-0">
             <Heart fill="currentColor" size={16} />
           </div>
           <ShinyText text="Aura Dental" disabled={false} speed={3} className="font-bold" color="#0F172A" shineColor="#7DD3FC" />
         </Link>
         
+        {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <Link
@@ -37,11 +45,45 @@ const Navbar = () => {
           ))}
         </div>
         
-        <Link to="/contact">
-          <button className="bg-navy-slate text-white px-6 py-3 rounded-lg font-manrope text-sm font-semibold hover:bg-slate-700 transition-all duration-300 scale-95 active:opacity-80">
-            <ShinyText text="Book Appointment" disabled={false} speed={3} color="#FFFFFF" shineColor="#7DD3FC" />
-          </button>
-        </Link>
+        <div className="hidden md:block">
+          <Link to="/contact">
+            <button className="bg-navy-slate text-white px-6 py-3 rounded-lg font-manrope text-sm font-semibold hover:bg-slate-700 transition-all duration-300 scale-95 active:opacity-80">
+              <ShinyText text="Book Appointment" disabled={false} speed={3} color="#FFFFFF" shineColor="#7DD3FC" />
+            </button>
+          </Link>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button 
+          className="md:hidden p-2 text-navy-slate"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`fixed inset-0 top-20 bg-white z-40 transition-transform duration-500 ease-in-out md:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <div className="flex flex-col p-8 space-y-8 h-full">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              className={`font-manrope text-2xl uppercase font-bold ${
+                location.pathname === link.path ? 'text-navy-slate' : 'text-slate-400'
+              }`}
+            >
+              {link.name}
+            </Link>
+          ))}
+          <div className="pt-8 border-t border-slate-100">
+            <Link to="/contact">
+              <button className="w-full bg-navy-slate text-white py-5 rounded-xl font-manrope font-bold text-lg">
+                Book Appointment
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );
@@ -49,33 +91,33 @@ const Navbar = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full py-20 bg-slate-50 border-t border-slate-200">
-      <div className="grid grid-cols-12 gap-8 px-16 max-w-[1440px] mx-auto">
-        <div className="col-span-12 md:col-span-4">
+    <footer className="w-full py-12 lg:py-20 bg-slate-50 border-t border-slate-200">
+      <div className="grid grid-cols-12 gap-8 px-6 md:px-16 max-w-[1440px] mx-auto">
+        <div className="col-span-12 lg:col-span-4 text-center lg:text-left">
           <div className="text-lg font-bold text-slate-900 mb-6 uppercase tracking-tighter">Aura Dental</div>
-          <p className="font-manrope text-sm leading-relaxed text-slate-500 max-w-xs">
+          <p className="font-manrope text-sm leading-relaxed text-slate-500 max-w-xs mx-auto lg:mx-0">
             Pioneering a new standard in dental clinical excellence through modern technology and specialized human care.
           </p>
         </div>
-        <div className="col-span-6 md:col-span-2">
-          <h4 className="font-bold text-slate-900 text-sm mb-6">Services</h4>
+        <div className="col-span-6 md:col-span-3 lg:col-span-2 text-center lg:text-left">
+          <h4 className="font-bold text-slate-900 text-sm mb-6 uppercase tracking-wider">Services</h4>
           <ul className="space-y-4">
             <li><Link to="/services" className="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm">General Dentistry</Link></li>
             <li><Link to="/services" className="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm">Cosmetic Care</Link></li>
             <li><Link to="/services" className="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm">Implantology</Link></li>
           </ul>
         </div>
-        <div className="col-span-6 md:col-span-2">
-          <h4 className="font-bold text-slate-900 text-sm mb-6">Practice</h4>
+        <div className="col-span-6 md:col-span-3 lg:col-span-2 text-center lg:text-left">
+          <h4 className="font-bold text-slate-900 text-sm mb-6 uppercase tracking-wider">Practice</h4>
           <ul className="space-y-4">
             <li><Link to="/practice" className="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm">Our Team</Link></li>
             <li><Link to="/practice" className="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm">Sustainability</Link></li>
           </ul>
         </div>
-        <div className="col-span-12 md:col-span-4">
-          <h4 className="font-bold text-slate-900 text-sm mb-6">Connect</h4>
+        <div className="col-span-12 lg:col-span-4 text-center lg:text-left">
+          <h4 className="font-bold text-slate-900 text-sm mb-6 uppercase tracking-wider">Connect</h4>
           <p className="text-sm text-slate-500 mb-6">102 Medical Plaza, Innovation District<br/>New York, NY 10012</p>
-          <div className="flex gap-4">
+          <div className="flex justify-center lg:justify-start gap-4">
             <a href="#" className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-navy-slate hover:text-white transition-all">
               <span className="material-symbols-outlined text-sm">alternate_email</span>
             </a>
