@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3f465c",
+                        "surface-container": "#eeeeee",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "outline": "#76777d",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "surface-bright": "#f9f9f9",
+                        "inverse-primary": "#bec6e0",
+                        "tertiary-container": "#141d21",
+                        "on-tertiary-fixed-variant": "#3f484d",
+                        "on-background": "#1a1c1c",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "surface-container-highest": "#e2e2e2",
+                        "primary-container": "#131b2e",
+                        "tertiary": "#000000",
+                        "on-tertiary-container": "#7c858b",
+                        "surface-dim": "#dadada",
+                        "surface-tint": "#565e74",
+                        "on-tertiary-fixed": "#141d21",
+                        "background": "#f9f9f9",
+                        "primary": "#000000",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-container": "#d5e3fd",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f0f1f1",
+                        "secondary": "#515f74",
+                        "surface": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#3a485c",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#dbe4ea",
+                        "on-secondary-container": "#57657b",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#d5e3fd",
+                        "on-primary-container": "#7c839b",
+                        "outline-variant": "#c6c6cd",
+                        "secondary-fixed-dim": "#b9c7e0",
+                        "surface-container-low": "#f3f3f4",
+                        "on-primary-fixed": "#131b2e",
+                        "on-secondary-fixed": "#0d1c2f",
+                        "primary-fixed": "#dae2fd"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-x": "64px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "section-gap": "160px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-xl": ["Manrope"],
+                        "headline-md": ["Manrope"],
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 h-20">
+<div class="flex justify-between items-center h-full px-16 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-slate-900 dark:text-slate-50 uppercase">
+                Aura Dental
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-all duration-300 ease-in-out" href="#">Services</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-900 dark:text-white border-b-2 border-slate-900 dark:border-slate-50 pb-1" href="#">Our Practice</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-all duration-300 ease-in-out" href="#">Patient Info</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-50 transition-all duration-300 ease-in-out" href="#">Contact</a>
+</div>
+<button class="px-6 py-3 bg-primary text-on-primary font-manrope text-sm uppercase font-semibold tracking-wide transition-all duration-300 hover:bg-slate-800 scale-95 active:opacity-80">
+                Book Appointment
+            </button>
+</div>
+</nav>
+<main class="pt-40">
+<!-- Hero Section: Swiss Layout -->
+<section class="max-w-[1440px] mx-auto px-16 grid grid-cols-12 gap-gutter mb-section-gap">
+<div class="col-span-8">
+<h1 class="font-display-xl text-display-xl text-primary mb-12">
+                    Clean Precision.<br/>Empathetic Care.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Founded on the principles of surgical excellence and patient tranquility, Aura Dental redefines the clinical experience through minimalist design and advanced technology.
+                </p>
+</div>
+<div class="col-span-4 self-end">
+<div class="border-l border-outline-variant pl-8 py-4">
+<span class="font-label-caps text-label-caps text-outline block mb-2 uppercase">ESTABLISHED</span>
+<span class="font-headline-md text-headline-md text-primary">2014</span>
+</div>
+</div>
+</section>
+<!-- Asymmetric Philosophy Section -->
+<section class="max-w-[1440px] mx-auto px-16 mb-section-gap grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-6 relative">
+<img class="w-full aspect-[4/5] object-cover grayscale-[20%]" data-alt="A pristine, minimalist dental examination room with floor-to-ceiling windows overlooking a serene garden. The lighting is bright and natural, emphasizing the surgical cleanliness of the white surfaces and soft blue accents. High-tech equipment is integrated seamlessly into the architectural design, reflecting a premium Swiss aesthetic. The mood is calm, professional, and technologically advanced." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ72aXc9DnKqubzOxfkWpm7JSfI2oJ36A0X5dQm6LF1kDI_vNGZNPu4XbIXB_rHJxRFxEJoZplAsqTe4LsVe_RsdElHXfjn63BP4jYK3yOqP_XsI-IykdUH_oQqrIBefkR1CiV2eU99Q3YpSHyw3kAWdKGWOLRZwuRyXfzeqmoQyFCIM4iKv0u2vzjAhV013X32OEPAcrhAT4GhcFeLJ6hA0Iywn5m4yXRGJa6O0HeRGX8KHgCK_NRqxbzagwXZe200rsAp8XPRDM"/>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-secondary-container z-[-1]"></div>
+</div>
+<div class="col-span-5 col-start-8">
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-8">Our Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Clinical hygiene meets architectural comfort.</h2>
+<div class="space-y-6 font-body-md text-body-md text-on-surface-variant">
+<p>We believe that the environment is as critical to healing as the procedure itself. Our clinic is designed to eliminate the 'white coat syndrome' through intentional whitespace and soft-tonal aesthetics.</p>
+<p>By integrating the latest in digital diagnostic imaging with a boutique hospitality approach, we provide a dental experience that is as precise as it is peaceful.</p>
+</div>
+</div>
+</section>
+<!-- Doctor Profiles: Swiss Grid -->
+<section class="bg-surface-container-low py-40">
+<div class="max-w-[1440px] mx-auto px-16">
+<div class="mb-24 flex justify-between items-end border-b border-outline-variant pb-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Practitioners</h2>
+<span class="font-label-caps text-label-caps text-outline uppercase">Expertise &amp; Innovation</span>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Bio 1 -->
+<div class="col-span-4 group">
+<div class="mb-8 overflow-hidden">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution professional portrait of a male dentist with a confident and kind expression. He is wearing a clean charcoal medical uniform, standing against a minimalist light grey background. The lighting is soft and directional, highlighting his expertise and approachable nature. The overall style is clean, modern, and clinical with a high-end editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDIpNPMTyoET8ykh5Xd-p2kIv6e502KNd5ym-D4KeDgzSg6mN5tJDSz5iFx9nztvjcR_TYjaKjVcQ9zr8r2KhRizl68SnCPJrVnxtnQ6GRldzpd4znOM2egOZytoP92UqFqks2SjZE_ci4Zq4gpSjAIVwD5pGW9UF4xORs4TTiXFGHrpEs7ujPQsyV1UBynsG-0yWhPY0py7LILsdLAS5Gj8WAA5lGdTLVW7Dx4ONX1QibQQi2m7k7roiKiqN2GCwSkWxSC005Joo"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dr. Julian Vance</h3>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-6">Chief Medical Officer / Prosthodontics</p>
+<p class="font-body-md text-body-md text-on-surface-variant">With over 15 years of clinical experience, Dr. Vance specializes in complex restorative architecture and digital smile design.</p>
+</div>
+<!-- Bio 2 -->
+<div class="col-span-4 mt-24 group">
+<div class="mb-8 overflow-hidden">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-resolution professional portrait of a female dental surgeon. She has a serene and professional demeanor, wearing a white surgical coat. The setting is a bright, modern clinic with a blurred high-tech dental chair in the background. The color palette is composed of soft whites, ice blues, and charcoal. The lighting is surgical and precise, reflecting a high-end medical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO6nv7-5AovjI78wU1lk8bNIXzODFbhnyO6z21LqY0QKlGTRByLdTLNbjV6qVtebMCp3It_PNVzhidtSz__bTiLLNScGgPpZQmvjcsm-FwVC2p2Cz0IHSZQAVUPSAn_l7dqydfJXQCuZovAGLq0TuyJCm28vbs4V_G3I6x6OCcTf-KzrHK8FsMRxCbCdKhtO-qlqGOpNOhWOKIB9_ZZiFviKWuMt75ACFSBmKCtWNtBrgrlVv7zQIo7EKAaM2MEw2vvzBZGVBJB8g"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dr. Elara Thorne</h3>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-6">Lead Orthodontics</p>
+<p class="font-body-md text-body-md text-on-surface-variant">A pioneer in invisible aligner technology, Dr. Thorne focuses on the intersection of facial aesthetics and functional bite alignment.</p>
+</div>
+<!-- Bio 3 -->
+<div class="col-span-4 group">
+<div class="mb-8 overflow-hidden">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A professional portrait of a male dental specialist in a modern, clinical setting. He is dressed in professional clinical attire, showing a warm yet serious expression that inspires trust. The background is a clean white wall with architectural shadows. The visual style is rooted in Swiss design minimalism, using a cool color temperature and pristine clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJB4dfKoqp9iLtPDxWDywttqUVjTqSsnosNGlT_V-i4oPpmNshReUlA0EhVe2JqmQ_ovJM3Os6JBEH86q2kpja08qljcWGe6mDuzjVtYdmu5TeBV7u_1-VeOXqpCQ6OlgPaSsjOjyEjnIOjHBrsBBb4j4uJGXPbjyoN-uda7QNSt5cfUhNG9sI6CAqz0xQQ0A6B5Wp0MK6TwWh9984e3ieEMjB-Zpu4TpBISWZ9fKzmWCCQQlDjU0AK95ODfwUTxb4DUjKTLHCoUc"/>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Dr. Marcus Chen</h3>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-6">Periodontal Specialist</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Dedicated to the foundation of oral health, Dr. Chen utilizes microsurgical techniques for tissue regeneration and implantology.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Values: Bento Grid -->
+<section class="max-w-[1440px] mx-auto px-16 my-section-gap">
+<div class="grid grid-cols-12 grid-rows-2 gap-gutter h-[800px]">
+<div class="col-span-8 row-span-1 bg-primary p-16 flex flex-col justify-end text-on-primary">
+<span class="font-label-caps text-label-caps text-on-primary/60 uppercase mb-4">Value 01</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Absolute Clarity</h3>
+<p class="font-body-lg text-body-lg text-on-primary/80 max-w-lg">Every treatment plan is presented with transparent pricing and detailed digital mapping. No surprises, only solutions.</p>
+</div>
+<div class="col-span-4 row-span-2 bg-slate-100 p-16 flex flex-col justify-between border border-slate-200">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-8">magnification_small</span>
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-4">Value 02</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Technological Edge</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">We invest in ultra-low radiation 3D scanning and AI-assisted diagnostics to ensure pinpoint accuracy in every procedure.</p>
+</div>
+<div class="col-span-4 row-span-1 bg-white border border-slate-200 p-12">
+<span class="font-label-caps text-label-caps text-outline uppercase block mb-4">Value 03</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Sustainable Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A digital-first, paperless workflow paired with eco-friendly sterilization protocols.</p>
+</div>
+<div class="col-span-4 row-span-1 bg-secondary-container p-12">
+<span class="font-label-caps text-label-caps text-on-secondary-container/70 uppercase block mb-4">Value 04</span>
+<h3 class="font-headline-md text-headline-md text-on-secondary-container mb-4">Patient Peace</h3>
+<p class="font-body-md text-body-md text-on-secondary-container/80">Sensory-optimized suites featuring noise-canceling technology and calming visual horizons.</p>
+</div>
+</div>
+</section>
+<!-- Office Imagery: Large Layout -->
+<section class="mb-section-gap">
+<div class="max-w-[1440px] mx-auto px-16 mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Space</h2>
+</div>
+<div class="flex gap-4 overflow-hidden h-[600px]">
+<div class="w-1/2 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A wide-angle interior view of a luxury dental lounge. The design is minimalist Swiss style with light oak wood paneling, polished concrete floors, and designer lounge chairs in charcoal fabric. Soft ambient lighting glows from recessed ceiling slots. Large windows reveal a glimpse of a manicured urban garden. The atmosphere is quiet, expensive, and incredibly relaxing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVCA-3OOaQgqdm5_lBF0Yn-bGEJJjcAZ0zt4JawlUfe2nUtbjfPwKB4O9RNRYB_7Ar6C8x4FTcHYCkuLDIBvLFQtNLwkQM4IfcdtX6Fkxe0KGZP1cijxAsDslSssuGO1knNAzZUAV8FCZK5hp5MEmt8PR0cEi3qmmaHWcpOihnS3xmqjWGzVb_8cIPZQ-iN9WiW2L1AtN17Jfp0LsUm_Ph70wON-FiZfH36xq_BNIhVTeOMXmg1KFoMAX5778pjK0qZsAnUNvKQ2Q"/>
+</div>
+<div class="w-1/4 flex-shrink-0">
+<img class="w-full h-full object-cover grayscale" data-alt="A close-up of high-end medical equipment in a dental clinic. A sleek, modern intraoral scanner rests on a white marble countertop. The background is a soft-focus clinical setting with cool blue tones. The lighting is sharp and highlights the metallic and glass textures of the technology, suggesting a high standard of precision and cleanliness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVBsGNDpCHxbK5s2zMQNkpAxa0DYECr252Op-ZEgKseUQ1gA7ksOqQGrASH2BJmL1XTUBvrpCIE2TURaV91Hqt4Yjwv3SXcAo_raV-KxEwgO9X0c3e2oH35aNDtSfm6cOBm5PGTIRiJ1sWN7l0SqdDa663c3xLmIpywI-h6vnn3_OWwJjKVvocyMBLap04E_a649D8GBDmlQnWYw60rhHb4nz-1KS0SZJVWEaYpvo5Cgjig0h7CPLWezMPODUWaP7tFSkKHBHoZRk"/>
+</div>
+<div class="w-1/4 flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="An artistic architectural shot of a clinic hallway. The walls are pristine white with geometric shadow patterns cast by a slatted ceiling. A single, high-end minimalist door at the end of the hall. The visual emphasizes depth, symmetry, and an 'airy' feeling typical of high-end Swiss-inspired medical facilities. The mood is serene and orderly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQiAsmzpAMdSm7qJ5mbDfCREU_RZC-395FNmB03XTThkC3gdvYJNPNGLaeZciDBXQhbYz-r7C8GJbkwEx-W2pHD4-QZCjrDyKXdukP6n4qTAXncg4vKCRazYAYlncXibQe0_xZBZ4ZJ8NczNjJMOh3Yq5neFJQaIuTdLhVEP_WHiPdWpwIt_Pe1GbadWHrk7SaqEarhgUNUjXxZfuBN7ACjlAeH-5me75d8EWy5GvbJvZfm9LE0VPb82TQ4vb8EpZiR7rqp1Amgx4"/>
+</div>
+</div>
+</section>
+<!-- Treatment Timeline: Specialized Component -->
+<section class="max-w-[1440px] mx-auto px-16 mb-section-gap">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Your Journey</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We have streamlined our patient onboarding to ensure every visit is efficient and every outcome is predictable.</p>
+</div>
+<div class="col-span-7 col-start-6">
+<div class="relative pl-12 border-l border-primary/20 space-y-24">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-[54px] top-0 w-3 h-3 rounded-full bg-primary ring-8 ring-background"></div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">01. Discovery</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">A comprehensive 3D digital scan and consultation where we map your current oral health and discuss your long-term aesthetic goals.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-[54px] top-0 w-3 h-3 rounded-full bg-primary ring-8 ring-background"></div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">02. Design</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Our team creates a digital prototype of your treatment plan, allowing you to visualize the results before we even begin.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-[54px] top-0 w-3 h-3 rounded-full bg-primary ring-8 ring-background"></div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">03. Execution</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Precise clinical intervention in our sensory-optimized suites, utilizing the latest in minimally invasive techniques.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-12 gap-8 px-16 max-w-[1440px] mx-auto">
+<div class="col-span-4">
+<div class="text-lg font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-tighter">Aura Dental</div>
+<p class="font-manrope text-sm leading-relaxed text-slate-500 dark:text-slate-400 max-w-xs">
+                    Setting the standard for modern dentistry through the fusion of clinical precision and patient-centric design.
+                </p>
+</div>
+<div class="col-span-2">
+<h4 class="font-manrope text-sm font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider">Practice</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Services</a></li>
+<li><a class="font-manrope text-sm font-medium text-slate-900 dark:text-slate-50 underline-offset-4 hover:underline" href="#">Our Practice</a></li>
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Technology</a></li>
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Case Studies</a></li>
+</ul>
+</div>
+<div class="col-span-2">
+<h4 class="font-manrope text-sm font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider">Patients</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Emergency Care</a></li>
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Accessibility</a></li>
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Pricing Guide</a></li>
+</ul>
+</div>
+<div class="col-span-4">
+<h4 class="font-manrope text-sm font-bold text-slate-900 dark:text-slate-50 mb-6 uppercase tracking-wider">Legal</h4>
+<ul class="space-y-4 mb-12">
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Privacy Policy</a></li>
+<li><a class="font-manrope text-sm text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 transition-colors duration-300" href="#">Terms of Service</a></li>
+</ul>
+<p class="font-manrope text-xs text-slate-400">© 2024 Aura Dental Practice. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

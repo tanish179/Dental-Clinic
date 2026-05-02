@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Book Appointment | Aura Dental</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-container": "#eeeeee",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e8e8e8",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-primary": "#ffffff",
+                      "on-surface": "#1a1c1c",
+                      "outline": "#76777d",
+                      "tertiary-fixed-dim": "#bfc8ce",
+                      "surface-bright": "#f9f9f9",
+                      "inverse-primary": "#bec6e0",
+                      "tertiary-container": "#141d21",
+                      "on-tertiary-fixed-variant": "#3f484d",
+                      "on-background": "#1a1c1c",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#45464d",
+                      "surface-container-highest": "#e2e2e2",
+                      "primary-container": "#131b2e",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#7c858b",
+                      "surface-dim": "#dadada",
+                      "surface-tint": "#565e74",
+                      "on-tertiary-fixed": "#141d21",
+                      "background": "#f9f9f9",
+                      "primary": "#000000",
+                      "surface-variant": "#e2e2e2",
+                      "secondary-container": "#d5e3fd",
+                      "on-secondary": "#ffffff",
+                      "inverse-on-surface": "#f0f1f1",
+                      "secondary": "#515f74",
+                      "surface": "#f9f9f9",
+                      "on-secondary-fixed-variant": "#3a485c",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#dbe4ea",
+                      "on-secondary-container": "#57657b",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#d5e3fd",
+                      "on-primary-container": "#7c839b",
+                      "outline-variant": "#c6c6cd",
+                      "secondary-fixed-dim": "#b9c7e0",
+                      "surface-container-low": "#f3f3f4",
+                      "on-primary-fixed": "#131b2e",
+                      "on-secondary-fixed": "#0d1c2f",
+                      "primary-fixed": "#dae2fd",
+                      "ice-blue": "#F0F9FF",
+                      "navy-slate": "#0F172A"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-x": "64px",
+                      "gutter": "32px",
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "section-gap": "160px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-xl": ["Manrope"],
+                      "headline-md": ["Manrope"],
+                      "label-caps": ["Inter"],
+                      "headline-lg": ["Manrope"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .focus-ice-blue:focus {
+            outline: none;
+            border-color: #d5e3fd;
+            box-shadow: 0 0 0 2px #F0F9FF;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-200">
+<nav class="flex justify-between items-center h-20 px-16 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-slate-900">Aura Dental</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Services</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Our Practice</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Patient Info</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-900 border-b-2 border-slate-900 pb-1 transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-navy-slate text-white px-6 py-2.5 rounded-lg font-manrope tracking-tight text-sm uppercase font-semibold scale-95 active:opacity-80 transition-transform">
+                Book Appointment
+            </button>
+</nav>
+</header>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="max-w-[1440px] mx-auto px-16 mb-24">
+<div class="grid grid-cols-12">
+<div class="col-span-12 lg:col-span-8">
+<span class="font-label-caps text-secondary uppercase mb-4 block">Reservation</span>
+<h1 class="font-display-xl text-primary mb-8">Begin your journey to a <br/><span class="text-secondary font-extralight italic">refined</span> smile.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl">
+                        Schedule your visit at our state-of-the-art clinic. We prioritize clinical excellence and patient comfort in every interaction.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Booking & Contact Grid -->
+<section class="max-w-[1440px] mx-auto px-16 mb-section-gap">
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Left Column: Simple Single-Column Form -->
+<div class="col-span-12 lg:col-span-6 bg-surface-container-lowest p-12 border border-slate-100">
+<h2 class="font-headline-md mb-12">Request Appointment</h2>
+<form class="space-y-10">
+<div class="group">
+<label class="font-label-caps text-on-surface-variant block mb-2">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-navy-slate focus-ice-blue transition-all duration-300 placeholder:text-slate-300" placeholder="Johnathan Doe" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-on-surface-variant block mb-2">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-navy-slate focus-ice-blue transition-all duration-300 placeholder:text-slate-300" placeholder="hello@auradental.com" type="email"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="group">
+<label class="font-label-caps text-on-surface-variant block mb-2">Preferred Date</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-navy-slate focus-ice-blue transition-all duration-300" type="date"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-on-surface-variant block mb-2">Treatment Type</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-navy-slate focus-ice-blue transition-all duration-300 text-on-surface">
+<option>General Consultation</option>
+<option>Cosmetic Dentistry</option>
+<option>Orthodontics</option>
+<option>Emergency Care</option>
+</select>
+</div>
+</div>
+<div class="group">
+<label class="font-label-caps text-on-surface-variant block mb-2">Message (Optional)</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 focus:ring-0 focus:border-navy-slate focus-ice-blue transition-all duration-300 placeholder:text-slate-300 resize-none" placeholder="Tell us about your dental history or specific concerns..." rows="3"></textarea>
+</div>
+<button class="w-full bg-navy-slate text-white py-5 rounded-lg font-manrope font-bold uppercase tracking-widest text-sm hover:bg-slate-700 transition-colors duration-300" type="submit">
+                            Request Appointment
+                        </button>
+</form>
+</div>
+<!-- Right Column: Info & Map -->
+<div class="col-span-12 lg:col-span-6 flex flex-col gap-gutter">
+<!-- Contact Details Card -->
+<div class="bg-ice-blue p-12 border border-blue-100 flex-grow">
+<h2 class="font-headline-md mb-10">Our Studio</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-navy-slate">location_on</span>
+<div>
+<h4 class="font-label-caps mb-2">Visit Us</h4>
+<p class="font-body-md text-on-surface-variant">1200 Wellness Plaza, Floor 4<br/>San Francisco, CA 94103</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-navy-slate">call</span>
+<div>
+<h4 class="font-label-caps mb-2">Call Us</h4>
+<p class="font-body-md text-on-surface-variant">+1 (555) 000-AURA</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-navy-slate">schedule</span>
+<div>
+<h4 class="font-label-caps mb-2">Working Hours</h4>
+<p class="font-body-md text-on-surface-variant">Mon – Fri: 08:00 – 19:00<br/>Sat: 09:00 – 14:00</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Container -->
+<div class="h-[400px] w-full bg-slate-200 overflow-hidden border border-slate-200">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated, high-end minimalist map visualization of San Francisco city streets. The image features a muted color palette of icy blues, slate grays, and whites, aligning with a clinical dental brand aesthetic. The lighting is soft and ambient, emphasizing a clean, modern, and professional atmosphere that evokes trust and precision." data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBGYwJljNkuo_levfLAXbSgmyZSu3g3Wtwxw04oWwcW7W-riZs1NL9CRjf9KZkmqjCC3n5XBeJ6U9hBIN78wmj3PHkM_dHSNdzHYoWokkQcgeyNvy3WtxS0DW9_5Ass2q2dkz3G9eLlMsnH3-YxRXplhwNvO9qRcDMURBvnHv5cYzptYO44RXvPpGKV6mHqlBqMW0F78VZti22vJS7p9Y_P4Goj-oN46RMl_gsZAn0-IeZwy4nvYDgF3sb7CQmgXTuPEz7Cv06j2g"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Timeline -->
+<section class="bg-surface-container-low py-section-gap overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-16">
+<div class="flex flex-col items-center text-center mb-24">
+<span class="font-label-caps text-secondary mb-4 uppercase">The Experience</span>
+<h2 class="font-headline-lg max-w-2xl">What to expect from your first Aura visit</h2>
+</div>
+<div class="relative flex justify-between max-w-5xl mx-auto">
+<!-- Vertical line -->
+<div class="absolute top-1/2 left-0 w-full h-[1px] bg-outline-variant -translate-y-1/2 hidden md:block"></div>
+<!-- Nodes -->
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-4 h-4 rounded-full bg-navy-slate mb-6 ring-8 ring-white"></div>
+<h4 class="font-headline-md text-xl mb-2">Consult</h4>
+<p class="font-body-md text-on-surface-variant text-center max-w-[200px]">Initial clinical assessment and digital imaging.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-4 h-4 rounded-full bg-navy-slate mb-6 ring-8 ring-white"></div>
+<h4 class="font-headline-md text-xl mb-2">Plan</h4>
+<p class="font-body-md text-on-surface-variant text-center max-w-[200px]">Bespoke treatment path tailored to your needs.</p>
+</div>
+<div class="relative z-10 flex flex-col items-center group">
+<div class="w-4 h-4 rounded-full bg-navy-slate mb-6 ring-8 ring-white"></div>
+<h4 class="font-headline-md text-xl mb-2">Execute</h4>
+<p class="font-body-md text-on-surface-variant text-center max-w-[200px]">Precise treatment using advanced technology.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 border-t border-slate-200 py-20">
+<div class="grid grid-cols-12 gap-8 px-16 max-w-[1440px] mx-auto">
+<div class="col-span-12 lg:col-span-4">
+<div class="text-lg font-bold text-slate-900 mb-6">Aura Dental</div>
+<p class="font-manrope text-sm leading-relaxed text-slate-500 max-w-xs">
+                    Committed to the intersection of clinical excellence and patient well-being through modern design and precision care.
+                </p>
+</div>
+<div class="col-span-6 lg:col-span-2">
+<h4 class="font-manrope text-sm font-bold text-slate-900 mb-6">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Services</a></li>
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Our Practice</a></li>
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Patient Info</a></li>
+</ul>
+</div>
+<div class="col-span-6 lg:col-span-2">
+<h4 class="font-manrope text-sm font-bold text-slate-900 mb-6">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Privacy Policy</a></li>
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Terms of Service</a></li>
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Emergency Care</a></li>
+<li><a class="font-manrope text-sm text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Accessibility</a></li>
+</ul>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col justify-between items-end">
+<div class="flex gap-6 mb-8">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-navy-slate transition-colors">share</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-navy-slate transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-navy-slate transition-colors">medical_services</span>
+</div>
+<div class="font-manrope text-sm text-slate-500">© 2024 Aura Dental Practice. All rights reserved.</div>
+</div>
+</div>
+</footer>
+</body></html>

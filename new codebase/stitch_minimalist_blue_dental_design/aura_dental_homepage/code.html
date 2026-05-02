@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "outline": "#76777d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#bec6e0",
+                    "tertiary-container": "#141d21",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "on-background": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#7c858b",
+                    "surface-dim": "#dadada",
+                    "surface-tint": "#565e74",
+                    "on-tertiary-fixed": "#141d21",
+                    "background": "#f9f9f9",
+                    "primary": "#000000",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-container": "#d5e3fd",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "secondary": "#515f74",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "on-secondary-container": "#57657b",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d5e3fd",
+                    "on-primary-container": "#7c839b",
+                    "outline-variant": "#c6c6cd",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "surface-container-low": "#f3f3f4",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "primary-fixed": "#dae2fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-x": "64px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-xl": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .tonal-layer {
+            background-color: #F0F9FF;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-secondary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-200">
+<div class="flex justify-between items-center h-20 px-16 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-slate-900">Aura Dental</div>
+<div class="hidden md:flex items-center space-x-10">
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-900 border-b-2 border-slate-900 pb-1 transition-all duration-300 ease-in-out" href="#">Services</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300 ease-in-out" href="#">Our Practice</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300 ease-in-out" href="#">Patient Info</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300 ease-in-out" href="#">Contact</a>
+</div>
+<button class="bg-[#0F172A] text-white px-6 py-3 rounded-lg font-manrope text-sm font-semibold hover:bg-slate-700 transition-all duration-300 scale-95 active:opacity-80">
+                Book Appointment
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-16 w-full grid grid-cols-12 items-center">
+<div class="col-span-12 lg:col-span-7 z-10">
+<span class="inline-block font-label-caps text-label-caps text-on-primary-container mb-6">ESTABLISHED 2024</span>
+<h1 class="font-display-xl text-display-xl text-primary mb-8 max-w-2xl">Precision Dentistry, Personal Care.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">
+                        Aura Dental combines Swiss clinical precision with a calming atmosphere to redefine your dental experience. Modern technology meets human touch.
+                    </p>
+<div class="flex gap-6">
+<button class="bg-[#0F172A] text-white px-10 py-5 rounded-lg font-manrope font-semibold hover:bg-slate-700 transition-all duration-300">
+                            Book Appointment
+                        </button>
+<button class="border border-slate-200 bg-transparent px-10 py-5 rounded-lg font-manrope font-semibold hover:bg-sky-50 transition-all duration-300">
+                            View Services
+                        </button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 absolute right-0 top-0 h-full w-1/2 hidden lg:block">
+<img alt="Aura Dental Clinic Interior" class="h-full w-full object-cover grayscale-[20%] brightness-105" data-alt="A high-end, minimalist dental clinic interior with expansive floor-to-ceiling windows overlooking a serene garden. The lighting is soft and natural, emphasizing the pristine white surfaces and clinical cleanliness. The color palette is dominated by pure whites and subtle ice-blue accents, creating a calming, professional atmosphere. The composition is wide and airy, using the Swiss design principle of negative space to convey a sense of surgical precision and luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdbOodVv1UP6533fYW0vskQZm3ivWhdcq5a5mfflWtKzOrRxZGq8LPtyohelCet_3WCCwXGw2X4YUPsOu_NHrhrh-P3XTHSB6FH3Ba0t9ewxoyXziqZmm7l8xsCAgZpzKQ2DSX9coWoZX4ftEN22e62FDviH_D-z9BU-2hMrImha90jjGCruM_yPnzanM933X9i8vpszW3GAUHIDV86d0hQWkhB1w59hWbKXQdb-bQSiauFBotmMdb9eYtnE7rvn_cmUQwntozpMs"/>
+</div>
+</div>
+</section>
+<!-- Services / Bento Grid -->
+<section class="py-[160px] bg-white">
+<div class="max-w-[1440px] mx-auto px-16">
+<div class="flex justify-between items-end mb-20">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Comprehensive Clinical Expertise</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">We offer a full spectrum of dental treatments utilizing the latest diagnostic imaging and surgical robotics.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-4xl text-slate-300">clinical_notes</span>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Bento Card 1 -->
+<div class="col-span-12 md:col-span-8 group relative overflow-hidden bg-surface-container-low p-10 h-[400px] border border-slate-100 flex flex-col justify-end transition-all duration-500 hover:border-slate-300">
+<div class="absolute top-10 right-10">
+<span class="material-symbols-outlined text-slate-400 text-3xl">dentistry</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Cosmetic Restorations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mb-8">Crafting symmetrical, natural-looking smiles through advanced porcelain artistry and precision mapping.</p>
+<a class="inline-flex items-center text-sm font-semibold tracking-wider uppercase group-hover:gap-2 transition-all duration-300" href="#">
+                            Explore Service <span class="material-symbols-outlined text-sm ml-2">arrow_forward</span>
+</a>
+</div>
+<!-- Bento Card 2 -->
+<div class="col-span-12 md:col-span-4 bg-[#0F172A] p-10 text-white h-[400px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl opacity-50">biotech</span>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Digital Imaging</h3>
+<p class="font-body-md text-body-md text-slate-400">Ultra-low radiation 3D scanning for pinpoint accuracy in treatment planning.</p>
+</div>
+</div>
+<!-- Bento Card 3 -->
+<div class="col-span-12 md:col-span-4 border border-slate-200 p-10 h-[400px] flex flex-col justify-between hover:bg-slate-50 transition-colors">
+<div>
+<span class="material-symbols-outlined text-3xl text-slate-600 mb-6">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md mb-4">Preventative Care</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Systematic hygiene protocols designed for long-term oral stability and systemic health.</p>
+</div>
+<!-- Bento Card 4 -->
+<div class="col-span-12 md:col-span-8 bg-surface-container h-[400px] relative overflow-hidden">
+<img alt="Advanced Lab Tech" class="absolute inset-0 w-full h-full object-cover opacity-50 transition-transform duration-700 hover:scale-105" data-alt="A close-up, high-resolution architectural shot of a modern dental laboratory. The space is filled with high-tech equipment including 3D printers and microscopic cameras. The lighting is crisp and cool-toned, reflecting off polished stainless steel and white quartz surfaces. This image emphasizes the surgical precision and technological advancement of the Aura Dental practice, maintaining a minimalist and high-end professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl8EXvphZ-4n5HOAFvv0Un_6r0EhJHsM8pkgv_Tt9-iNJrqPzpXFKrlshf77Vgg6Xn4Dn4U800OvXxHeDRKv-GrtFzK0GdKoYuOPMK6tUCFOJAd90GtGRiSLf3RHRKGVJAhpKLHKrxAOmj8WxY7i36Y4YrdQvPL6ITJZ7RU7XtDgzFafho9QpaA42bz109PyH6hfFcS4C8PGTpEJiiUFJ3mxpO_m1uhMtiyOYWUr_bPc-bd-3V9VM9D_kowU4lXTlfi4zImbY3E5c"/>
+<div class="absolute inset-0 p-10 flex flex-col justify-end bg-gradient-to-t from-white/80 to-transparent">
+<h3 class="font-headline-md text-headline-md mb-2">Oral Surgery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Specialized surgical procedures performed in a sterile, state-of-the-art environment.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Doctor Profile / Treatment Timeline Style -->
+<section class="py-[160px] bg-white overflow-hidden">
+<div class="max-w-[1440px] mx-auto px-16 grid grid-cols-12 gap-16 items-center">
+<div class="col-span-12 md:col-span-5">
+<div class="aspect-[4/5] bg-slate-100 overflow-hidden rounded-lg">
+<img alt="Dr. Julian Vane" class="w-full h-full object-cover" data-alt="A professional portrait of a senior dentist in a clean, minimalist white lab coat. The background is a soft-focus clinical environment with cold lighting. The doctor has a confident yet warm expression, looking directly at the camera. The visual style is high-end medical photography, featuring high contrast and a clinical blue-and-white color palette to represent expertise and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJntKx0IlphXWx09if0FDhsAS2rM-I8DqmiENjgmR4hk_O5NFzyM9cXbeizeEPJS3hyYYzq4RfHfBDEtJPS9X0FFFfXSBxtcqJIyk3zGhTUMFEzctI5hRY8dFiHS2dG_likcCuQyQLHgqKusO8nZiu3mMpUv9tc6pY12jAVzkZkAWcZdibfBZFoh1OxHj6dyw9swoOBkKU74uQ3WdZWasDFOoia9oWlosN0Z96bBhE1BJe0x3evXKKffLBAdgAPx7YWUShp6FAd1E"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7">
+<span class="font-label-caps text-label-caps text-on-primary-container mb-6 inline-block">MEET OUR CLINICAL DIRECTOR</span>
+<h2 class="font-display-xl text-[64px] font-light text-primary leading-tight mb-8">Dr. Julian Vane</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">
+                        With over 20 years of experience in reconstructive dentistry, Dr. Vane brings a unique blend of surgical precision and aesthetic vision to Aura Dental.
+                    </p>
+<div class="space-y-8 relative">
+<div class="absolute left-3 top-2 bottom-2 w-px bg-slate-200"></div>
+<div class="relative pl-12">
+<div class="absolute left-2 top-2 w-2 h-2 rounded-full bg-[#0F172A]"></div>
+<h4 class="font-manrope font-bold text-slate-900 mb-1">Education</h4>
+<p class="text-sm text-slate-500">Royal College of Surgeons, London - Masters in Implantology</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-2 top-2 w-2 h-2 rounded-full bg-[#0F172A]"></div>
+<h4 class="font-manrope font-bold text-slate-900 mb-1">Innovation</h4>
+<p class="text-sm text-slate-500">Pioneer of Digital Smile Design protocols in private practice</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-2 top-2 w-2 h-2 rounded-full bg-[#0F172A]"></div>
+<h4 class="font-manrope font-bold text-slate-900 mb-1">Philosophy</h4>
+<p class="text-sm text-slate-500">"Treat the person, not just the tooth. Excellence is in the details."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-[160px] bg-slate-50">
+<div class="max-w-[1440px] mx-auto px-16">
+<div class="text-center mb-24">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Patient Perspectives</h2>
+<div class="w-12 h-1 bg-[#0F172A] mx-auto"></div>
+</div>
+<div class="grid grid-cols-12 gap-8">
+<!-- Testimonial 1 -->
+<div class="col-span-12 md:col-span-4 bg-white p-12 rounded-lg border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500">
+<div class="flex text-amber-400 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-10 italic">"The level of clinical precision at Aura is unmatched. The digital imaging process was fascinating, and the results of my restoration exceeded all expectations."</p>
+<div>
+<p class="font-manrope font-bold text-slate-900">Eleanor Sterling</p>
+<p class="text-sm text-slate-400 uppercase tracking-widest">Architect</p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="col-span-12 md:col-span-4 bg-white p-12 rounded-lg border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500">
+<div class="flex text-amber-400 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-10 italic">"I've always had dental anxiety, but the serene atmosphere here completely changed that. Dr. Vane explains everything with such clarity and patience."</p>
+<div>
+<p class="font-manrope font-bold text-slate-900">Marcus Thorne</p>
+<p class="text-sm text-slate-400 uppercase tracking-widest">Creative Director</p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="col-span-12 md:col-span-4 bg-white p-12 rounded-lg border border-slate-100 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-500">
+<div class="flex text-amber-400 mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-10 italic">"Efficient, professional, and technologically advanced. The best dental experience I've had in 30 years. Their preventative care plan is incredibly thorough."</p>
+<div>
+<p class="font-manrope font-bold text-slate-900">Dr. Sarah Chen</p>
+<p class="text-sm text-slate-400 uppercase tracking-widest">Cardiologist</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-[160px] bg-[#0F172A] text-white">
+<div class="max-w-[1440px] mx-auto px-16 text-center">
+<h2 class="font-display-xl text-display-xl mb-8">Ready for a Better Experience?</h2>
+<p class="font-body-lg text-slate-400 max-w-2xl mx-auto mb-12">Book your initial consultation today and discover why Aura Dental is the preferred choice for precise, comfortable care.</p>
+<div class="flex justify-center gap-6">
+<button class="bg-white text-[#0F172A] px-12 py-5 rounded-lg font-manrope font-bold hover:bg-slate-100 transition-all duration-300">
+                        Book Appointment
+                    </button>
+<button class="border border-slate-700 text-white px-12 py-5 rounded-lg font-manrope font-bold hover:bg-slate-800 transition-all duration-300">
+                        Contact Clinic
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-slate-50 border-t border-slate-200">
+<div class="grid grid-cols-12 gap-8 px-16 max-w-[1440px] mx-auto">
+<div class="col-span-12 md:col-span-4">
+<div class="text-lg font-bold text-slate-900 mb-6">Aura Dental</div>
+<p class="font-manrope text-sm leading-relaxed text-slate-500 max-w-xs">
+                    Pioneering a new standard in dental clinical excellence through modern technology and specialized human care.
+                </p>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h4 class="font-bold text-slate-900 text-sm mb-6">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">General Dentistry</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Cosmetic Care</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Implantology</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Surgery</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h4 class="font-bold text-slate-900 text-sm mb-6">Practice</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Emergency Care</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Our Team</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">Accessibility</a></li>
+<li><a class="text-slate-500 hover:text-slate-900 transition-colors duration-300 text-sm" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-4">
+<h4 class="font-bold text-slate-900 text-sm mb-6">Connect</h4>
+<p class="text-sm text-slate-500 mb-6">102 Medical Plaza, Innovation District<br/>New York, NY 10012</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#0F172A] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center hover:bg-[#0F172A] hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-sm">call</span>
+</a>
+</div>
+</div>
+<div class="col-span-12 mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-manrope text-sm leading-relaxed text-slate-400">© 2024 Aura Dental Practice. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-slate-900 text-sm" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-slate-900 text-sm" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

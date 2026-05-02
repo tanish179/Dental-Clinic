@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "surface-container": "#eeeeee",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#bec6e0",
+                    "on-primary": "#ffffff",
+                    "on-surface": "#1a1c1c",
+                    "outline": "#76777d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "surface-bright": "#f9f9f9",
+                    "inverse-primary": "#bec6e0",
+                    "tertiary-container": "#141d21",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "on-background": "#1a1c1c",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#131b2e",
+                    "tertiary": "#000000",
+                    "on-tertiary-container": "#7c858b",
+                    "surface-dim": "#dadada",
+                    "surface-tint": "#565e74",
+                    "on-tertiary-fixed": "#141d21",
+                    "background": "#f9f9f9",
+                    "primary": "#000000",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-container": "#d5e3fd",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#f0f1f1",
+                    "secondary": "#515f74",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "on-secondary-container": "#57657b",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#d5e3fd",
+                    "on-primary-container": "#7c839b",
+                    "outline-variant": "#c6c6cd",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "surface-container-low": "#f3f3f4",
+                    "on-primary-fixed": "#131b2e",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "primary-fixed": "#dae2fd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-x": "64px",
+                    "gutter": "32px",
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-xl": ["Manrope"],
+                    "headline-md": ["Manrope"],
+                    "label-caps": ["Inter"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.7", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                    "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .service-card:hover {
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+        .swiss-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-slate-200 transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-16 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-slate-900">Aura Dental</div>
+<div class="hidden md:flex space-x-12 items-center">
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-900 border-b-2 border-slate-900 pb-1" href="#">Services</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Our Practice</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Patient Info</a>
+<a class="font-manrope tracking-tight text-sm uppercase font-semibold text-slate-500 hover:text-slate-900 transition-all duration-300" href="#">Contact</a>
+</div>
+<button class="bg-[#0F172A] text-white px-6 py-2.5 rounded-lg text-sm font-semibold tracking-wide hover:bg-slate-700 transition-all duration-300 active:opacity-80 scale-95 transition-transform">
+                Book Appointment
+            </button>
+</div>
+</nav>
+<main class="mt-20">
+<!-- Hero Section -->
+<header class="swiss-grid px-16 pt-32 pb-40">
+<div class="col-span-12 md:col-span-8">
+<p class="font-label-caps text-label-caps text-primary mb-6">EXCEPTIONAL CARE</p>
+<h1 class="font-display-xl text-display-xl text-primary-container mb-8">Precision Dentistry. <br/>Clinical Excellence.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Experience a higher standard of dental services in a serene, modern environment. We blend surgical precision with a compassionate approach to oral health.
+                </p>
+</div>
+</header>
+<!-- Service Categories (Asymmetric Grid) -->
+<section class="px-16 pb-40">
+<div class="grid grid-cols-12 gap-y-32 gap-x-12">
+<!-- Category 01: Preventative -->
+<div class="col-span-12 md:col-span-4 space-y-8">
+<div class="aspect-square bg-slate-100 overflow-hidden rounded-lg border border-slate-200">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of high-tech dental hygiene instruments resting on a pristine white marble surface. The lighting is clinical yet soft, emphasizing the metallic textures and clean lines. The overall aesthetic is minimalist and high-end, utilizing a palette of silver, white, and icy blue to convey surgical precision and professional hygiene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYhsQcRyWZA-WpyFmi-Q8sK4dtM1Sc1O-hthdmnFUXUcKGmtC4MdWf8f3wZGA-o9L6oQlEJ6vh6aEYuCp4y424jiLomzJhf8uXY9kRvsvl8sEh3X_SkwrNSO-MHJaNTuNgpVHNN2vF7tALArirU4tbcyiAnk07pxPuEic6_5j0XNUv2jdEE3fQVJA5rMPVHX3Bc2bzq_WYsX65nrHvklYR5vIvt5Ej3c8vnbWBmh8s9ZZaNhV4HJCmzzomq0-wAsP67uw2_hdoZzA"/>
+</div>
+<div>
+<span class="text-slate-400 font-label-caps text-label-caps">01</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container mt-2 mb-4">Preventative</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">The foundation of long-term health through rigorous diagnostic and maintenance protocols.</p>
+</div>
+</div>
+<!-- Treatments Detail Grid -->
+<div class="col-span-12 md:col-start-6 md:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Service Item -->
+<div class="service-card p-10 border border-slate-200 bg-white transition-all duration-500 group">
+<span class="material-symbols-outlined text-primary-container mb-6" data-icon="clinical_notes">clinical_notes</span>
+<h3 class="font-headline-md text-headline-md mb-3">Comprehensive Exams</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Detailed digital diagnostics including 3D imaging and periodontal screening to identify underlying issues before they arise.</p>
+</div>
+<!-- Service Item -->
+<div class="service-card p-10 border border-slate-200 bg-white transition-all duration-500 group">
+<span class="material-symbols-outlined text-primary-container mb-6" data-icon="dentistry">dentistry</span>
+<h3 class="font-headline-md text-headline-md mb-3">Professional Hygiene</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Advanced ultrasonic scaling and precision airflow therapy for a thorough, non-invasive deep cleaning process.</p>
+</div>
+</div>
+<!-- Category 02: Cosmetic (Asymmetric Layout) -->
+<div class="col-span-12 grid grid-cols-12 gap-12 pt-32 items-center">
+<div class="col-span-12 md:col-span-5 order-2 md:order-1">
+<span class="text-slate-400 font-label-caps text-label-caps">02</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container mt-2 mb-6">Cosmetic Artistry</h2>
+<div class="space-y-12">
+<div class="service-card p-8 border border-slate-200 bg-white group transition-all">
+<h3 class="font-headline-md text-headline-md mb-2">Porcelain Veneers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hand-crafted ceramic shells designed to match your natural tooth structure with absolute optical fidelity.</p>
+</div>
+<div class="service-card p-8 border border-slate-200 bg-white group transition-all">
+<h3 class="font-headline-md text-headline-md mb-2">Laser Whitening</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Medical-grade thermal activation for immediate, sensitivity-conscious aesthetic enhancement.</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-start-7 md:col-span-6 order-1 md:order-2">
+<div class="aspect-[4/5] bg-slate-100 overflow-hidden rounded-lg border border-slate-200">
+<img class="w-full h-full object-cover" data-alt="A portrait of a serene woman with a natural, bright smile, captured in soft, high-key studio lighting. The background is a clean, neutral white that emphasizes her healthy skin and teeth. The composition is artistic and airy, focusing on the clarity and brightness of a modern aesthetic, using a minimalist Swiss design philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYy5aV6Yns6EaNTxiMaA20rnBRfXanw4hgP0ZkGBPx6CxHvvcYskbPXKv-vFS5FX6H_SHEc3yFYYCCkqEeTwFWemBLGaAP8xcz38yvdKm3XO34qZhMti0oI9m4-_ymftNNpdnEsqDH0z_DS_zcT8fSoIfi7rKAq5LNhuLLr2S-FyHMnNIOBe70_oX2gXNFEWO9qvpOeHhRal_1iwUQFz0TbPKva9VXJfQ_LLXqJdP4ZP_PuVDdcgPmCCJeKfMnZVhNrIllgFYZUIs"/>
+</div>
+</div>
+</div>
+<!-- Category 03: Orthodontics -->
+<div class="col-span-12 pt-32">
+<div class="swiss-grid gap-12">
+<div class="col-span-12 md:col-span-4">
+<span class="text-slate-400 font-label-caps text-label-caps">03</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-container mt-2 mb-4">Orthodontics</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Modern alignment solutions that prioritize both function and facial harmony.</p>
+</div>
+<div class="col-span-12 md:col-start-5 md:col-span-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="p-10 bg-primary-container text-white rounded-lg">
+<span class="material-symbols-outlined text-white mb-6" data-icon="visibility_off">visibility_off</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Invisalign® Clear Aligners</h3>
+<p class="font-body-md text-body-md opacity-80">Removable, transparent corrective trays engineered using proprietary SmartTrack technology for predictable tooth movement.</p>
+</div>
+<div class="p-10 border border-slate-200 bg-white service-card group">
+<span class="material-symbols-outlined text-primary-container mb-6" data-icon="architecture">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-4">Precision Brackets</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">High-grade medical steel or ceramic options for complex structural alignment with minimal visibility.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-slate-50 py-32 border-t border-slate-200">
+<div class="px-16 max-w-[1440px] mx-auto text-center">
+<h2 class="font-display-xl text-display-xl text-primary-container mb-8">Begin Your Consultation.</h2>
+<div class="flex justify-center gap-6">
+<button class="bg-[#0F172A] text-white px-10 py-4 rounded-lg font-semibold hover:bg-slate-700 transition-all">Schedule Appointment</button>
+<button class="border border-slate-300 px-10 py-4 rounded-lg font-semibold hover:bg-white transition-all">View Pricing</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 bg-slate-50 border-t border-slate-200">
+<div class="grid grid-cols-12 gap-8 px-16 max-w-[1440px] mx-auto font-manrope text-sm leading-relaxed">
+<div class="col-span-12 md:col-span-4">
+<div class="text-lg font-bold text-slate-900 mb-6">Aura Dental</div>
+<p class="text-slate-500 max-w-xs">Dedicated to providing clinical excellence and premium dental care in a sophisticated environment.</p>
+</div>
+<div class="col-span-6 md:col-span-2 space-y-4 flex flex-col">
+<span class="font-bold text-slate-900">Services</span>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Preventative</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Cosmetic</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Orthodontics</a>
+</div>
+<div class="col-span-6 md:col-span-2 space-y-4 flex flex-col">
+<span class="font-bold text-slate-900">Practice</span>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Our Team</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Sustainability</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Careers</a>
+</div>
+<div class="col-span-6 md:col-span-2 space-y-4 flex flex-col">
+<span class="font-bold text-slate-900">Support</span>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Emergency Care</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Accessibility</a>
+<a class="text-slate-500 hover:text-slate-900 underline-offset-4 hover:underline transition-colors duration-300" href="#">Privacy Policy</a>
+</div>
+<div class="col-span-12 border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500">© 2024 Aura Dental Practice. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-slate-900" href="#">Instagram</a>
+<a class="text-slate-400 hover:text-slate-900" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
